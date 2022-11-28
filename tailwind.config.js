@@ -16,7 +16,7 @@ module.exports = {
       keyframes: {
         type: {
           '0%': { transform: 'translateX(0ch)' },
-          '5%, 10%': { transform: 'translateX(1ch)' },
+          '5%, 10%': { transform: 'translateX(2ch)' },
           '15%, 20%': { transform: 'translateX(2ch)' },
           '25%, 30%': { transform: 'translateX(3ch)' },
           '35%, 40%': { transform: 'translateX(4ch)' },
