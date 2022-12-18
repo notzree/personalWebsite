@@ -30,4 +30,10 @@ a {
   font-family: "burtons";
   src: url('../public/Burtons.otf');
 }
+@layer base {
+  body {
+   @apply dark:bg-slate-800 dark:text-white;
+  }
 }
+}
+

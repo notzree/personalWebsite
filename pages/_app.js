@@ -1,6 +1,7 @@
 import '../styles/globals.css'
-import { motion,AnimatePresence} from "framer-motion"
+document.documentElement.classList.add("dark"); // dark mode on scroll 
 function MyApp({ Component, pageProps }) {
+  
   return <Component {...pageProps} />
 }
 
