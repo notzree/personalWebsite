@@ -10,6 +10,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
@@ -30,10 +31,6 @@ a {
   font-family: "burtons";
   src: url('../public/Burtons.otf');
 }
-@layer base {
-  body {
-   @apply dark:bg-slate-800 dark:text-white;
-  }
-}
+
 }
 
