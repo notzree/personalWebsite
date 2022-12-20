@@ -14,7 +14,7 @@ function Projectinformation ({projDescrip, name, link, photo, skills}){
                     <div>
                         <ul class = "flex flex-wrap justify-evenly  my-1 ">
                         {skills?.map(item =>
-                            <li key = "{item}" class = "text-gray-900 dark:text-white mx-4 md:mr-4  rounded-md bg-slate-300 dark:bg-slate-500 px-3 py-1 text-sm" >{item}</li>
+                            <li key = "{item}" class = "text-gray-900 dark:text-white  mx-0.5 my-1 rounded-md bg-slate-300 dark:bg-slate-500 px-2 py-1 text-sm" >{item}</li>
                             )}
                             
                         </ul>        
