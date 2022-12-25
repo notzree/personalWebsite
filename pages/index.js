@@ -94,7 +94,7 @@ export default function Home() {
             <Projectinformation
             key = {1}
               name="Restaurant Finder App"
-              photo="public\rzFoodAppPhoto.PNG"
+              photo="https://user-images.githubusercontent.com/118649285/202923794-f214e1ca-6d14-4901-947f-73222ae29d61.png"
               skills={[
                 "React",
                 "Javascript",
@@ -124,7 +124,7 @@ export default function Home() {
             <Projectinformation
             key = {3}
               name="Market research Paper "
-              photo="public\rzFoodAppPhoto.PNG"
+              photo="https://user-images.githubusercontent.com/118649285/209455298-5aa587a9-b0fe-4118-b8c3-53d35425f799.png"
               skills={["Research", "Business Management"]}
               projDescrip={[
                 "Researched and analyzed " , 
