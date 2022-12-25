@@ -2,8 +2,9 @@ import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import styles from "../styles/Home.module.css";
 import { AiFillLinkedIn, AiFillGithub, AiFillLinkedin } from "react-icons/ai";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import { themeChange } from "theme-change";
 
 const Projectinformation = dynamic(
   () => import("./projectcomponents/Projectinformation"),
@@ -12,34 +13,27 @@ const Projectinformation = dynamic(
 //render this dynamic component on the server (for darkmode), watch htis: https://www.youtube.com/watch?v=9U1UG-bY8Cw if forget.
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
   return (
-    <div id="scrollable-div" className={darkMode ? "" : "dark"}>
+    <div id="scrollable-div">
       <Head>
         <title>Richard Zhang</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-white px-10 dark:bg-slate-800 ">
+      <main className="bg-base-100 px-10  text-primary">
         <section className=" min-h-screen ">
           <nav className=" pt-10 mb-12 flex justify-evenly">
             <ul className="flex items-center justify-evenly ">
-              <li className="">
-                <BsFillMoonStarsFill
-                  onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-xl"
-                />
-              </li>
-              <li>
+              <li className="hover:scale-125 transition ease-in-out hover:-translate-y-1 hover:rounded-md">
                 <a
                   href="/websiteResume.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className=" bg-gradient-to-r from-violet-400 to-purple-600 text-white px-4 py-2 rounded-md mx-8 dark:text-gray-200 font-mono"
+                  className=" bg-gradient-to-r from-secondary to-primary text-black px-4 py-2 rounded-md mx-8 font-mono "
                 >
                   resume
                 </a>
               </li>
-              <li>
+              <li className="hover:scale-125 transition ease-in-out hover:-translate-y-1 hover:rounded-md">
                 <a
                   href="https://github.com/notzree"
                   className="cursor-pointer text-2"
@@ -47,7 +41,7 @@ export default function Home() {
                   <AiFillGithub className="text-2xl " />
                 </a>
               </li>
-              <li>
+              <li className="hover:scale-125 transition ease-in-out hover:-translate-y-1 hover:rounded-md">
                 <a
                   href="https://www.linkedin.com/in/richard-zhang-318861217/"
                   className="cursor-pointer text-2"
@@ -59,52 +53,51 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex justify-start pl-24">
-            <h1 className="mb-2 font-mono text-4xl text-slate-900 dark:text-gray-100 md:text-6xl">
-              hi, I&apos;m <br className="block md:hidden" />
-              <span className="relative">
-                <span className="h-20 pt-2 overflow-x-hidden whitespace-nowrap text-brand-accent">
-                  Richard <span className="text-3xl md:text-5xl"></span>
-                </span>
-                <span className="{`${styles.cursor} absolute -bottom-0 right-0 -top-1 inline-block bg-white dark:bg-slate-800 w-96 animate-type will-change`}"></span>
-              </span>
+            <h1 className="mb-2 font-mono text-4xl text-accent  md:text-6xl">
+              hi, I&apos;m Richard.
             </h1>
           </div>
           <div>
-            <p className="flex justify-start text-slate-900 dark:text-gray-100 font-mono pl-24  ">
+            <p className="flex justify-start text-secondary  font-mono pl-24  ">
               Im studying&nbsp;
-              <span class="underline decoration-violet-400 h-5">
+              <span class="underline decoration-accent h-5">
                 Systems Design Engineering
               </span>
-              &nbsp;at the University of Waterloo with interests in software development and consulting. 
+              &nbsp;at the University of Waterloo with interests in fullstack
+              software development and dApp development.
             </p>
             <br></br>
-            <p className="flex justify-start text-slate-900 dark:text-gray-100  font-mono pl-24">
+            <p className="flex justify-start text-secondary   font-mono pl-24">
               Recently I've been...
             </p>
-            <ul class="list-disc text-slate-900 dark:text-gray-100 font-mono pl-32">
-              <li>expanding my full-stack skills with Next.js, Primsa, and PostgreSQL</li>
+            <ul class="list-disc text-secondary  font-mono pl-32">
+              <li>
+                expanding my full-stack skills with Next.js, Primsa, and
+                Supabase
+              </li>
               <li>Learing how to deploy to Azure</li>
             </ul>
             <br></br>
-            <p class = "flex justify-start text-slate-900 dark:text-gray-100  font-mono pl-24"> 
+            <p class="flex justify-start text-secondary   font-mono pl-24">
               and away from work, I've been...
             </p>
-            <ul class="list-disc text-slate-900 dark:text-gray-100 font-mono pl-32 ">
+            <ul class="list-disc text-secondary  font-mono pl-32 ">
               <li>Cultivating my passion for rock climbing</li>
               <li>Training to a 185 benchpress (25 pounds away)</li>
             </ul>
             <br></br>
-            <p class = "flex justify-start text-slate-900 dark:text-gray-100  font-mono pl-24 mb-14">
+            <p class="flex justify-start text-secondary   font-mono pl-24 mb-14">
               Here are some of my recent projects
             </p>
           </div>
-          <div class="flex justify-start  ">
-          <Projectinformation
+          <div class="flex  justify-start pl-7 content-center ">
+            <Projectinformation
+            key = {1}
               name="Restaurant Finder App"
               photo="/rzFoodAppPhoto.png"
               skills={[
                 "React",
-                "Javacsript",
+                "Javascript",
                 "Axios",
                 "Material UI",
                 "google-maps API",
@@ -114,17 +107,34 @@ export default function Home() {
               link="https://github.com/notzree/uwfoodmap"
             />
             <Projectinformation
+            key = {2}
+              name="Persona Generator for Syde 161"
+              photo="https://user-images.githubusercontent.com/118649285/209454385-c735ebee-7612-4e3c-b723-e01e29d8887d.png"
+              skills={[
+                "React",
+                "Javascript",
+                "Axios",
+                "OpenAI API",
+                "Tailwind",
+              ]}
+              projDescrip="Randomly generates user stories and persona's utilized in my SYDE 161 design course. Randomly generates profile, name, age, and other information, then uses Open Ai's Davinci text completion model to return an AI generated user story. "
+              link = "https://github.com/notzree/personaGenerator"
+            />
+
+            <Projectinformation
+            key = {3}
               name="Market research Paper "
               photo="/rzBusinessIAphoto.png"
               skills={["Research", "Business Management"]}
               projDescrip={[
-                "Researched and analyzed ",
+                "Researched and analyzed " , 
                 // eslint-disable-next-line react/jsx-key
                 <u>
                   <a href="https://www.rhmuaythai.com/">
                     Richmond Hill Muay Thais
                   </a>
-                </u>,
+                </u> 
+                 ,
                 " online marketing strategies to optimize marketing spending in lieu of a new location opening",
               ]}
               link="/rzBusinessIA.pdf"
