@@ -68,7 +68,7 @@ export default function Home() {
             </p>
             <br></br>
             <p className="flex justify-start text-secondary   font-mono pl-24">
-              Recently I've been...
+              Recently I&apos;ve been...
             </p>
             <ul class="list-disc text-secondary  font-mono pl-32">
               <li>
@@ -79,7 +79,7 @@ export default function Home() {
             </ul>
             <br></br>
             <p class="flex justify-start text-secondary   font-mono pl-24">
-              and away from work, I've been...
+              and away from work, I&apos;ve been...
             </p>
             <ul class="list-disc text-secondary  font-mono pl-32 ">
               <li>Cultivating my passion for rock climbing</li>
@@ -117,7 +117,7 @@ export default function Home() {
                 "OpenAI API",
                 "Tailwind",
               ]}
-              projDescrip="Randomly generates user stories and persona's utilized in my SYDE 161 design course. Randomly generates profile, name, age, and other information, then uses Open Ai's Davinci text completion model to return an AI generated user story. "
+              projDescrip="Randomly generates user stories and persona&apos;s utilized in my SYDE 161 design course. Randomly generates profile, name, age, and other information, then uses Open Ai&apos;s Davinci text completion model to return an AI generated user story. "
               link = "https://github.com/notzree/personaGenerator"
             />
 
