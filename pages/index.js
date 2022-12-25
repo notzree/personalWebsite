@@ -94,7 +94,7 @@ export default function Home() {
             <Projectinformation
             key = {1}
               name="Restaurant Finder App"
-              photo="/rzFoodAppPhoto.png"
+              photo="public\rzFoodAppPhoto.PNG"
               skills={[
                 "React",
                 "Javascript",
@@ -124,7 +124,7 @@ export default function Home() {
             <Projectinformation
             key = {3}
               name="Market research Paper "
-              photo="/rzBusinessIAphoto.png"
+              photo="public\rzFoodAppPhoto.PNG"
               skills={["Research", "Business Management"]}
               projDescrip={[
                 "Researched and analyzed " , 
